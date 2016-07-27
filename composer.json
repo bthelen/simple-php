@@ -1,0 +1,14 @@
+{
+    "require": {
+        "monolog/monolog": "1.13.*",
+        "php": ">=5.6",
+        "stomp-php/stomp-php": "4.*",
+        "predis/predis": "v1.1.1",
+        "cloudfoundry-community/cf-helper-php": "1.6.*"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php -r 'print \"Hello World!\n\";'"
+        ]
+    }
+}
