@@ -20,4 +20,5 @@ echo "before tar"
 tar -czvf $ARTIFACT_ID-$VERSION.tar.gz ./project 
 echo "after tar"
 mv $ARTIFACT_ID-$VERSION.tar.gz ./build-output
+ls ./build-output
 echo "done"

@@ -11,6 +11,9 @@ groups:
   - simple-major
   - simple-minor
 
+##################################################
+# RESOURCES
+##################################################
 resources:
 - name: pipeline
   type: git
@@ -82,6 +85,9 @@ cf-params: &cf-params
   CF_ORG: {{cf-org}}
   CF_SPACE: {{cf-space}}
 
+##################################################
+# JOBS
+##################################################
 jobs:
 - name: prepare-itest-env
   plan:
