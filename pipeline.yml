@@ -47,6 +47,7 @@ resources:
     access_key_id: {{aws-access-key-id}}
     secret_access_key: {{aws-secret-access-key}}
     endpoint: {{s3-endpoint}}
+    region_name: us-west-2
 
 - name: simple-release
   type: s3
@@ -56,6 +57,7 @@ resources:
     access_key_id: {{aws-access-key-id}}
     secret_access_key: {{aws-secret-access-key}}
     endpoint: {{s3-endpoint}}
+    region_name: us-west-2
 
 - name: cf-itest
   type: cf
