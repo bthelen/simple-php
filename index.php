@@ -8,6 +8,14 @@ use Stomp\Client;
 use Stomp\Exception\StompException;
 use Stomp\Stomp;
 
+
+echo "### APACHE1 ####";
+var_dump($_REQUEST);
+var_dump($_SERVER);
+var_dump($_GET);
+var_dump($_POST);
+echo "### APACHE ####";
+
 /////////////////////////////////////////////////////////
 // CF
 /////////////////////////////////////////////////////////
@@ -54,7 +62,7 @@ if (!$conn) {
 }
 echo " ### ORACLE ### - connected";
 
-$statement = oci_parse($conn, 'select * from error_log');
+$statement = oci_parse($conn, 'select * from error_log where ROWNUM <= 100 order by logdate desc');
 oci_execute($statement);
 
 echo "<table border='1'>\n";
@@ -74,9 +82,12 @@ echo "</table>\n";
 /////////////////////////////////////////////////////////
 
 // make a connection
-$con = new Client('tcp://10.0.16.80:61613');
-$con->setLogin("376fb158-3812-41ca-a004-3a4a1e3111d2", "8iilcmu1kfo9oeveaslidvpjgv");
-$con->setVhostname("3551cee2-5f94-4b46-b9b7-0cbb909bfcfc");
+$con = new Client('tcp://54.149.58.221:61613');
+$con->setLogin("producer_login", "producer_password");
+//$con->setVhostname("3551cee2-5f94-4b46-b9b7-0cbb909bfcfc");
+
+//$con->setLogin("376fb158-3812-41ca-a004-3a4a1e3111d2", "8iilcmu1kfo9oeveaslidvpjgv");
+//$con->setVhostname("3551cee2-5f94-4b46-b9b7-0cbb909bfcfc");
 
 // connect
 try {

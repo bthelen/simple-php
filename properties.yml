@@ -1,0 +1,33 @@
+cf-api-url: https://api.pcf.borgescloud.com
+cf-system-domain: pcf.borgescloud.com
+cf-app-domain: pcf.borgescloud.com
+cf-username: mborges@pivotal.io
+cf-organization: Borges-Org
+cf-space: staging
+cf-skip-ssl: true
+
+cf-oracle-service-url: c2-54-149-58-221.us-west-2.compute.amazonaws.com:49161/Xe
+cf-oracle-service-username: system
+cf-oracle-service-password: oracle
+
+cf-redis-service: p-redis shared-vm redis
+cf-rabbit-service: p-rabbitmq standard rabbit
+
+s3-endpoint: s3.amazonaws.com
+3-bucket-milestone: simple-release-candidates
+s3-bucket-release: simple-release
+
+pipeline-git-uri: https://github.com/mborges-pivotal/simple-php.git
+pipeline-git-branch: master
+
+cf-simple-name: simple
+cf-simple-host: simple
+cf-simple-services: oracle, redis, rabbit
+
+simple-git-uri: git@github.com:mborges-pivotal/simple-php.git
+simple-git-branch: master
+
+git-private-key: |
+  -----BEGIN RSA PRIVATE KEY-----
+  ...
+  -----END RSA PRIVATE KEY-----
