@@ -5,7 +5,7 @@
 set -e
 
 # copy the artifact to the task-output folder
-cp release/$CF_ARTIFACT_ID-*.jar.gz prepare-manifest-output/.
+cp release/$CF_ARTIFACT_ID-*.tar.gz prepare-manifest-output/.
 
 pushd prepare-manifest-output
 

@@ -1,7 +1,7 @@
 cf-api-url: https://api.pcf.borgescloud.com
 cf-system-domain: pcf.borgescloud.com
 cf-app-domain: pcf.borgescloud.com
-cf-username: mborges@pivotal.io
+cf-username: mborges
 cf-org: Borges-Org
 cf-space: staging
 cf-skip-ssl: true
