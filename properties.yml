@@ -27,6 +27,9 @@ cf-simple-services: oracle, redis, rabbit
 simple-git-uri: https://github.com/mborges-pivotal/simple-php.git
 simple-git-branch: master
 
+simple-git-version-uri: git@github.com:mborges-pivotal/ci-versions.git
+simple-git-version-branch: master
+
 git-private-key: |
   -----BEGIN RSA PRIVATE KEY-----
   ...
