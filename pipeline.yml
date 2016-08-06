@@ -17,14 +17,14 @@ resources:
   source:
     uri: {{pipeline-git-uri}}
     branch: {{pipeline-git-branch}}
-    privage_key: {{git-private-key}}
+    #privage_key: {{git-private-key}}
 
 - name: simple
   type: git
   source:
-    uri: {{simple-service-git-uri}}
-    branch: {{simple-service-git-branch}}
-    private_key: {{git-private-key}}
+    uri: {{simple-git-uri}}
+    branch: {{simple-git-branch}}
+    #private_key: {{git-private-key}}
 
 - name: simple-version
   type: semver
@@ -34,7 +34,7 @@ resources:
     branch: {{simple-git-branch}}
     file: number
     initial_version: 1.0.0-rc.0
-    private_key: {{git-private-key}}
+    #private_key: {{git-private-key}}
 
 - name: simple-milestone
   type: s3

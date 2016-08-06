@@ -14,15 +14,16 @@ outputs:
 - name: itest
 
 params:
-  CF_API_URL:
-  CF_SKIP_SSL:
-  CF_USERNAME:
-  CF_PASSWORD:
-  CF_ORG:
-  CF_SPACE:
-  CF_DB_SERVICE:
-  CF_CONFIG_SERVER_URI:
-  CF_CONFIG_SERVER_LABEL:
-
+  CF_API_URL: api.pcf.borgescloud.com
+  CF_SKIP_SSL: true
+  CF_USERNAME: mborges
+  CF_PASSWORD: pivotal
+  CF_ORG: Borges-Org
+  CF_SPACE: staging
+  CF_DB_SERVICE_URL: c2-54-149-58-221.us-west-2.compute.amazonaws.com:49161/Xe 
+  CF_DB_SERVICE_USERNAME: system
+  CF_DB_SERVICE_PASSWORD: oracle
+  CF_REDIS_SERVICE: p-redis shared-vm redis
+  CF_RABBIT_SERVICE: p-rabbitmq standard rabbit
 run:
   path: pipeline/ci/prepare-cf.sh
