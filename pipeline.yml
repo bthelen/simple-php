@@ -52,7 +52,7 @@ resources:
   type: s3
   source:
     bucket: {{s3-bucket-release}}
-    regexp: simple-(.*).jar
+    regexp: simple-(.*).tar.gz
     access_key_id: {{aws-access-key-id}}
     secret_access_key: {{aws-secret-access-key}}
     endpoint: {{s3-endpoint}}
@@ -118,7 +118,7 @@ jobs:
     params:
       ARTIFACT_ID: simple
   - put: simple-milestone
-    params: { file: build-output/simple-*.jar.gz }
+    params: { file: build-output/simple-*.tar.gz }
   - put: simple-version
     params: { file: version/number }
 
