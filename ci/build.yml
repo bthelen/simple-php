@@ -4,8 +4,8 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: java
-    tag: '8'
+    repository: composer/composer
+    tag: 'latest'
 
 inputs:
 - name: pipeline
@@ -17,7 +17,7 @@ outputs:
 
 params:
   TERM: dumb
-  ARTIFACT_ID:
+  ARTIFACT_ID: simple
 
 run:
   path: pipeline/ci/build.sh

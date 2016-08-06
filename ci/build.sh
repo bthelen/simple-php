@@ -4,9 +4,20 @@ set -e
 
 VERSION=`cat version/number`
 
+echo "####### ${ARTIFACT_ID}  #########"
+echo "####### ${VERSION}  #########"
+
 pushd project
-  compose install
+composer install
+#SLEEP=60
 popd
 
-tar -czvf $ARTIFACT_ID-$VERSION.tar.gz ./project
-cp project/$ARTIFACT_ID-$VERSION.jar build-output/.
+# give services time to spin up
+#echo "waiting for composer to initialize ($SLEEP seconds)"
+#sleep $SLEEP
+
+echo "before tar"
+tar -czvf $ARTIFACT_ID-$VERSION.tar.gz ./project 
+echo "after tar"
+mv $ARTIFACT_ID-$VERSION.tar.gz ./build-output
+echo "done"
