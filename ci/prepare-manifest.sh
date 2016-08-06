@@ -9,7 +9,7 @@ cp release/$CF_ARTIFACT_ID-*.tar.gz prepare-manifest-output/.
 
 pushd prepare-manifest-output
 
-ARTIFACT_PATH=$(ls $CF_ARTIFACT_ID-*.jar.gz)
+ARTIFACT_PATH=$(ls $CF_ARTIFACT_ID-*.tar.gz)
 
 cat <<EOF >manifest.yml
 ---
