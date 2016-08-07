@@ -21,7 +21,7 @@ pipeline-git-uri: https://github.com/mborges-pivotal/simple-php.git
 pipeline-git-branch: master
 
 cf-simple-name: simple
-cf-simple-host: simple
+cf-simple-host: simple-t1
 cf-simple-services: oracle, redis, rabbit
 
 simple-git-uri: https://github.com/mborges-pivotal/simple-php.git
