@@ -149,5 +149,5 @@ $con->disconnect();
 	echo "Redis: ", print_r(redis($service_blob)), "\r\n";
 	echo "User Provided: ", print_r(user_provided($service_blob)), "\r\n";
 
-	phpinfo();
+	//phpinfo();
 ?>
