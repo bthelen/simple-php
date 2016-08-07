@@ -1,7 +1,7 @@
 <?php
 
 // https://github.com/cloudfoundry-community/cf-helper-php
-require_once __DIR__ .'/../lib/vendor/autoload.php';
+require_once __DIR__ .'/vendor/autoload.php';
 use CfCommunity\CfHelper\CfHelper;
 
 use Stomp\Client;
