@@ -4,6 +4,7 @@ applications:
   memory: 128M
   instances: 1
   path: .
+  services: [ oracle, redis, rabbit ]
   buildpack: php_oracle_buildpack
   env:
     BP_DEBUG: "True"
