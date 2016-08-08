@@ -62,7 +62,7 @@ echo "Connected to Redis";
 
 $redis->set("foo", "bar");
 $value = $redis->get("foo");
-echo "<p><b>Should see bar</b>, foo -> <b>${value}</b></p>";
+echo "<p><b>You should see bar</b>, foo -> <b>${value}</b></p>";
 
 /////////////////////////////////////////////////////////
 // ORACLE
