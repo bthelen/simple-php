@@ -1,2 +1,4 @@
 update-pipeline.sh
 id_rsa
+composer.lock
+vendor/*

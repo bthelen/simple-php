@@ -1,0 +1,7 @@
+"cfhelper":{
+    "type": "development"
+}
+"php-ini": {
+    "display_errors": "On",
+    "error_reporting": 24575, //equal to E_ALL & ~E_DEPRECATED
+}

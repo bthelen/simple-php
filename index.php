@@ -115,16 +115,21 @@ oci_close($conn);
 /////////////////////////////////////////////////////////
 echo "<h2>RabbitMQ - Stomp</h2>"; 
 
-$rabbit = $serviceManager->getService('rabbit');
+echo "<p>######################## </p>";
+$rabbit = $serviceManager->getService('rabbit')->getValue('protocols')['stomp'];
 print_r($rabbit);
 
 // make a connection
-$con = new Client('tcp://54.149.58.221:61613');
-$con->setLogin("producer_login", "producer_password");
-//$con->setVhostname("3551cee2-5f94-4b46-b9b7-0cbb909bfcfc");
+//$con = new Client('tcp://54.149.58.221:61613');
+//$con->setLogin("producer_login", "producer_password");
 
-//$con->setLogin("376fb158-3812-41ca-a004-3a4a1e3111d2", "8iilcmu1kfo9oeveaslidvpjgv");
-//$con->setVhostname("3551cee2-5f94-4b46-b9b7-0cbb909bfcfc");
+echo "<p>########################</p> ";
+echo "## ", $rabbit['host'], " ## ", $rabbit['port'];
+$rabbitUrl = "tcp://" . $rabbit['host'] . ":" . $rabbit['port'];
+
+$con = new Client($rabbitUrl);
+$con->setLogin($rabbit['username'], $rabbit['password']);
+$con->setVhostname($rabbit['vhost']);
 
 // connect
 try {
