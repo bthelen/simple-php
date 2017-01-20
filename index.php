@@ -15,7 +15,7 @@ use Stomp\Client;
 use Stomp\Exception\StompException;
 use Stomp\Stomp;
 
-echo "<h1>TEST 5 - GM</h1>";
+echo "<h1>TEST 1 - Exxon</h1>";
 
 /////////////////////////////////////////////////////////
 // CF
