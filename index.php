@@ -15,7 +15,7 @@ use Stomp\Client;
 use Stomp\Exception\StompException;
 use Stomp\Stomp;
 
-echo "<h1>TEST 1 - Exxon</h1>";
+echo "<h1>TEST 1 - GM</h1>";
 
 /////////////////////////////////////////////////////////
 // CF
@@ -85,9 +85,11 @@ $DB_CHAR = 'AL32UTF8';
 
 echo "### $DB, $DB_USER, $DB_PASS ###";
 
-$DB = 'ec2-54-149-58-221.us-west-2.compute.amazonaws.com:49161/Xe';
+/*
+$DB = '54.190.63.194:49161/Xe';
 $DB_USER = 'system';
 $DB_PASS = 'oracle';
+ */
 
 //$conn = oci_connect($DB_USER, $DB_PASS, $DB, $DB_CHAR);
 $conn = oci_connect($DB_USER, $DB_PASS, $DB);
@@ -98,6 +100,7 @@ if (!$conn) {
 echo "<p> Some records from error_log table </p>";
 
 $statement = oci_parse($conn, 'select * from error_log where ROWNUM <= 5 order by logdate desc');
+$statement = oci_parse($conn, 'select * from help');
 oci_execute($statement);
 
 echo "<table border='1'>\n";
