@@ -164,13 +164,13 @@ echo "<h2>Reading VCAP_SERVICES</h2>";
 
 
    function rabbit($service_blob, $rb_protocol) {
-            $services = getProvider($service_blob, "p-rabbitmq");
+            $services = getProvider($service_blob, "p.rabbitmq");
             $service = $services[0]['credentials']['protocols'][$rb_protocol];
             return $service;
     }
 
    function redis($service_blob) {
-            $services = getProvider($service_blob, "p-redis");
+            $services = getProvider($service_blob, "p.redis");
             $service = $services[0]['credentials'];
             return $service;
     }

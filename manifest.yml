@@ -5,6 +5,7 @@ applications:
   instances: 1
   path: .
   services: [ oracle, redis, rabbit ]
-  buildpack: php_oracle_buildpack
+  buildpacks: 
+  - php_buildpack_4_3_82
   env:
-    BP_DEBUG: "False"
+    BP_DEBUG: true
